@@ -6,24 +6,12 @@ const StarshipLists = (props) => {
 
   return (
     <section>
-    <h2>Starships</h2>
-    <h4>Number of Results: {filteredStarships.length}</h4>
-      {/* <ul>
-      {filteredStarships.map((starship, index)=>{
-        return (
-          <li key={index}>
-            <h3>{starship.name}</h3>
-            <h4>Class: {starship.starship_class}</h4>
-            <h4>Manufacturer: {starship.manufacturer}</h4>
-            <h4>Model: {starship.model}</h4>
-          </li>
-        )
-      })}
-    </ul> */}
+      <h2>Starships</h2>
+      <h4>Number of Results: {filteredStarships.length}</h4>
 
-    <StarshipCard filteredStarships={filteredStarships}/>
+      <StarshipCard filteredStarships={filteredStarships}/>
 
-  </section>
+    </section>
   )
 }
 
