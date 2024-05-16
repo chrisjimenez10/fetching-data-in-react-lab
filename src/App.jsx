@@ -3,6 +3,7 @@ import {useState, useEffect} from "react";
 import * as StarshipList from "./services/starshipService";
 const {fetchStarships} = StarshipList;
 import "./App.css";
+import StarshipLists from "./components/StarshipLists"; //Child Component
 
 //Parent Component
 const App = () => {
@@ -58,7 +59,7 @@ const App = () => {
         </form>
       </div>
 
-      <section>
+      {/* <section>
         <h2>Starships</h2>
         <h4>Number of Results: {filteredStarships.length}</h4>
           <ul>
@@ -73,11 +74,14 @@ const App = () => {
             )
           })}
         </ul>
-      </section>
+      </section> */}
+
+      <StarshipLists filteredStarships={filteredStarships} />
+
       </main>
     </>
    
   );
 }
 
-export default App
+export default App;
